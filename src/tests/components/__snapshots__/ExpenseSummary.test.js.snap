@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should show 0 expenses and $0 when no expenses 1`] = `
+<div>
+  <h2>
+    Viewing 
+    0
+     
+    expenses
+     totalling 
+    $0.00
+  </h2>
+</div>
+`;
+
+exports[`should show number and total of visible expenses 1`] = `
+<div>
+  <h2>
+    Viewing 
+    10
+     
+    expenses
+     totalling 
+    $275,687,960,548.57
+  </h2>
+</div>
+`;
