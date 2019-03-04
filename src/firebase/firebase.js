@@ -1,8 +1,5 @@
 import * as firebase from 'firebase';
 
-
-
-
 const config = {
     apiKey: process.env.FIREBASE_API_KEY,
     authDomain: process.env.FIREBASE_AUTH_DOMAIN,
@@ -33,16 +30,16 @@ export { firebase , database as default };
 //     console.log(snapshot.key, snapshot.val());
 // });
 
-  database.ref('expenses').on('value', (snapshot) => {
-    const expenses = [];
+  // database.ref('expenses').on('value', (snapshot) => {
+  //   const expenses = [];
 
-    snapshot.forEach((childSnapshot) => {
-        expenses.push({
-            id: childSnapshot.key,
-            ...childSnapshot.val()
-        });
-    });
-    console.log(expenses);
-  });
+  //   snapshot.forEach((childSnapshot) => {
+  //       expenses.push({
+  //           id: childSnapshot.key,
+  //           ...childSnapshot.val()
+  //       });
+  //   });
+  //   console.log(expenses);
+  // });
 
 
