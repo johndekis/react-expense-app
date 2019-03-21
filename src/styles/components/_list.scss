@@ -1,7 +1,7 @@
 .list-header {
-    background: $off-white;
-    border: 1px solid darken($off-white, 7%);
-    color: $grey;
+    background: $dark-grey;
+    border: 1px solid lighten($grey, 7%);
+    color: whitesmoke;
     display: flex;
     justify-content: space-between;
     padding: $s-size $m-size;
@@ -15,16 +15,24 @@
 }
 
 .list-item {
-    border: 1px solid darken($off-white, 7%);
+    background: $grey;
+    border: 1px solid lighten($grey, 7%);
     border-top: none;
-    color: $dark-grey;
+    color: white;
     display: flex;
     flex-direction: column;
     padding: $s-size;
     text-decoration: none;
     transition: background .3s ease;
     &:hover {
-        background: $off-white;
+        background: $dark-grey;
+        border: none;
+        text-shadow: 0.01em 0.01em 0.09em white;
+        .list-item__data {
+            color: $bright-green;
+            
+            text-shadow: 0.01em 0.01em 0.09em;
+        }
     }
     @media (min-width: $desktop-breakpoint) {
         align-items: center;
@@ -36,7 +44,7 @@
 
 .list-item__message {
     align-items: center;
-    color: $grey;
+    color: $light-grey;
     justify-content: center;
     padding: $m-size;
     &:hover {
@@ -47,17 +55,33 @@
 .list-item__title {
     margin: 0;
     word-break: break-all;
+    font-size: 3rem;
 }
 
 .list-item__sub-title {
-    color: $grey;
+    color: $off-white;
     font-size: $font-size-small;
+}
+
+.list-item__sub-title::before {
+    content: "\2022";  
+    color: $bright-green; 
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em; 
 }
 
 .list-item__data {
     margin: $s-size 0 0 0;
+   
     @media (min-width: $desktop-breakpoint) {
         margin: 0;
         padding-left: $s-size;
     }
+}
+
+.note {
+    margin: 0 0 0 2em;
+    font-size: .7em;
+    color: $off-white;
 }

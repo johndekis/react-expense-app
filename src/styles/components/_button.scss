@@ -1,13 +1,19 @@
 .button {
-    background-color: $blue;
+    background-color: $bright-green;
     border: none;
+    border-radius: .4em;
     color: white;
     display: inline-block; 
-    font-size: $font-size-large;
+    font-size: $font-size-small;
     font-weight: 300;
     line-height: 1;   
     padding: $s-size;
     text-decoration: none;
+    &:hover {
+        color: $bright-green;
+        border: 1px solid $bright-green;
+        background-color: #444;
+    }
 }
 
 .button__link {
@@ -16,4 +22,21 @@
 
 .button__secondary {
     background: #888;
+}
+
+.gcon {
+    display: inline-block;
+    background: url('/images/google.svg');
+    height: 1.5em;
+    width: 1.5em;
+    margin-right: .5em;
+}
+
+.login {
+    background-color: #333;
+    margin: 0 auto;
+    width: 12em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }

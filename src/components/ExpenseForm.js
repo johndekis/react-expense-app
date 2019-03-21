@@ -5,7 +5,6 @@ import { SingleDatePicker } from 'react-dates';
 export default class ExpenseForm extends React.Component {
   constructor(props) {
     super(props);
-
     this.state = {
       description: props.expense ? props.expense.description : '',
       note: props.expense ? props.expense.note : '',
@@ -15,14 +14,17 @@ export default class ExpenseForm extends React.Component {
       error: ''
     };
   }
+
   onDescriptionChange = (e) => {
     const description = e.target.value;
     this.setState(() => ({ description }));
   };
+
   onNoteChange = (e) => {
     const note = e.target.value;
     this.setState(() => ({ note }));
   };
+
   onAmountChange = (e) => {
     const amount = e.target.value;
 
@@ -35,9 +37,11 @@ export default class ExpenseForm extends React.Component {
       this.setState(() => ({ createdAt }));
     }
   };
+
   onFocusChange = ({ focused }) => {
     this.setState(() => ({ calendarFocused: focused }));
   };
+
   onSubmit = (e) => {
     e.preventDefault();
 
@@ -53,10 +57,12 @@ export default class ExpenseForm extends React.Component {
       });
     }
   };
+
   render() {
+    
     return (       
       <form className="form" onSubmit={this.onSubmit}>
-      {this.state.error && <p className="form__error">{this.state.error}</p>}
+        {this.state.error && <p className="form__error">{this.state.error}</p>}
         <input
           className="text-input"
           type="text"
@@ -85,13 +91,11 @@ export default class ExpenseForm extends React.Component {
           placeholder="Add a note for your expense (optional)"
           value={this.state.note}
           onChange={this.onNoteChange}
-        >
-        </textarea>
-        <div>
-         <button className="button">Save Expense</button>
-        </div>
-        
+        ></textarea>
+          <div>
+          <button className="button">Save Expense</button>
+          </div>        
       </form>
-    )
-  }
+    );
+  };
 }
