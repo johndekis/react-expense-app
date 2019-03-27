@@ -18,7 +18,11 @@
 
 .button__link {
     background: none;
+    &:hover {
+        background: #222;
+    }
 }
+
 
 .button__secondary {
     background: #888;

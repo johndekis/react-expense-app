@@ -1,0 +1,77 @@
+.CalendarMonth__caption, .CalendarDay__button, .DateInput__display-text--has-input {
+    color: white;
+}
+
+.DateRangePickerInput {
+    background-color: #333;
+    border: none;
+}
+
+.DateInput {
+    color: white;
+    background: #333;
+}
+
+.DateRangePickerInput__arrow svg {
+    fill: white;
+}
+
+.DateInput--with-caret:after {
+    border-bottom-color: #31b124;
+}
+
+.DayPicker--horizontal {
+    background: #222;
+}
+
+.CalendarMonth, .CalendarMonthGrid, .CalendarMonthGrid--horizontal, 
+.DayPicker__focus-region, 
+.DayPickerNavigation--horizontal .DayPickerNavigation__prev, 
+.DayPickerNavigation--horizontal .DayPickerNavigation__next,
+.transition-container--horizontal {
+    background: #222;
+}
+
+.DayPickerNavigation--horizontal .DayPickerNavigation__next--default svg, .DayPickerNavigation--horizontal .DayPickerNavigation__prev--default svg {
+    fill: white;
+}
+
+.DayPicker__focus-region {
+    border-top: 2px solid #31b124;
+}
+
+.DateRangePickerInput__clear-dates:focus, .DateRangePickerInput__clear-dates--hover {
+    background: #2e2e2e;
+}
+
+.DayPickerNavigation--horizontal .DayPickerNavigation__prev, .DayPickerNavigation--horizontal .DayPickerNavigation__next {
+    border: 1px solid #2e2e2e;
+}
+
+ .CalendarDay--selected-span, .DateInput__display-text--focused {
+    background: #6bef5d;
+    border: 1px solid #31b124;
+}
+
+/*  selected start day  */
+.CalendarDay--selected-start, .CalendarDay--selected-end, .CalendarDay--selected {
+    background: #1a7011;
+    border: 1px solid #1a7011;
+}
+/* hover on calendar days */
+.CalendarDay--selected-span.CalendarDay--hovered, .CalendarDay--selected-span:active {
+    background: #31b124;
+}
+
+.CalendarDay--selected-start:active, .CalendarDay--selected-end:active, .CalendarDay--selected:active {
+    background: #1a7011;
+}
+
+/* drp help menu */
+.KeyboardShortcutRow__key {
+    background: #333;
+}
+
+.DayPickerKeyboardShortcuts__panel {
+    background: #222;
+}

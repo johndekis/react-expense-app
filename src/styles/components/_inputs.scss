@@ -1,8 +1,14 @@
 .text-input {
-   border: 1px solid #cacccd;
+   border: none;
    height: 50px;
    font-size: $font-size-large;
    padding: $s-size;
+   color: white;
+   background: #333;
+   &:focus {
+       outline: 2px solid $bright-green;
+       color: $bright-green;
+   }
 }
 
 .select {
@@ -14,3 +20,9 @@
     @extend .text-input;
     height: 10rem;
 }
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: white;
+    opacity: 1; 
+  }
+ 
